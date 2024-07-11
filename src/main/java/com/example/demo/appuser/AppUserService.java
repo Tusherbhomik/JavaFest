@@ -69,6 +69,18 @@ public class AppUserService implements UserDetailsService {
         return token;
 
     }
+    public String loginUser(String email, String rawPassword) {
+        AppUser appUser = appUserRepository.findByEmail(email)
+                .orElseThrow(() ->
+                        new UsernameNotFoundException(
+                                String.format(USER_NOT_FOUND_MSG, email)));
+
+        if (bCryptPasswordEncoder.matches(rawPassword, appUser.getPassword())) {
+            return "Login successful";
+        } else {
+            throw new IllegalStateException("Invalid email or password");
+        }
+    }
 
 
 }
