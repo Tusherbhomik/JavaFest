@@ -12,7 +12,8 @@ public class LoginController {
     private final LoginService loginService;
 
     @PostMapping
-    public AppUser login(@RequestBody LoginRequest request) {
+    //Changed
+    public String login(@RequestBody LoginRequest request) {
         return loginService.login(request);
     }
 }

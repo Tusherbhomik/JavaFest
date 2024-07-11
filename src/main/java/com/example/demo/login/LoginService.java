@@ -10,7 +10,9 @@ import org.springframework.stereotype.Service;
 public class LoginService {
     private final AppUserService appUserService;
 
-    public AppUser login(LoginRequest request) {
+    //changed
+    public String login(LoginRequest request) {
+
         return appUserService.loginUser(request.getEmail(), request.getPassword());
     }
 }
