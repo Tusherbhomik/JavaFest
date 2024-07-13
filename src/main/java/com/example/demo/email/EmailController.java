@@ -3,7 +3,7 @@ package com.example.demo.email;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/mail")
 public class EmailController {

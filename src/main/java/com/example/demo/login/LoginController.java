@@ -1,9 +1,8 @@
 package com.example.demo.login;
 
-import com.example.demo.appuser.AppUser;
+
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
 @CrossOrigin
 @RestController
 @RequestMapping(path = "api/v1/login")
