@@ -31,7 +31,7 @@ public class WebSecurityConfig {
                 .cors(withDefaults()) // Enable CORS
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/api/v*/registration/**", "/api/v*/login/**", "/mail/send/**").permitAll()
+                        .requestMatchers("/api/v*/registration/**", "/api/v*/login/**", "/mail/send/**","/api/schools/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(withDefaults());
